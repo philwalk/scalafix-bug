@@ -14,6 +14,23 @@ object Dependencies {
   lazy val sMeta = "4.3.18" // "4.3.17"
   lazy val betterFilesVer = "3.9.1" // "3.8.0"
 
+  lazy val depResolvers = Seq(
+    "semanticdb repo hunch"     at "https://mvnrepository.com/artifact/semanticdb-scalac",
+    "semanticdb repo"           at "https://mvnrepository.com/artifact/org.scalameta/semanticdb-scalac",
+    "mavenrepos-sema"           at "https://mvnrepository.com/artifact/org.scalameta/semanticdb",
+    "mavenrepository"           at "https://mvnrepository.com/artifact/org.scalameta/scalameta",
+    "maven artifact"            at "https://mvnrepository.com/artifact",
+    "Sonatype Releases"         at "https://oss.sonatype.org/content/repositories/releases",
+    "Sonatype snapshots"        at "https://oss.sonatype.org/content/repositories/snapshots",
+    "maven-central"             at "https://mvnrepository.com/artifact/org.scalameta",
+    "Google-repo"               at "https://mvnrepository.com/artifact/com.googlecode.cobra-winldtp/ldtp",
+    "Cobra-Ldtp-Repo"           at "https://artifacts.alfresco.com/nexus/content/repositories/public/",
+    "maven-central-snowtide"    at "https://mvnrepository.com/artifact/com.snowtide",
+   ("snowtide-releases"         at "http://maven.snowtide.com/releases").withAllowInsecureProtocol(true),
+//   Resolver.bintrayRepo("cibotech", "public"),
+//  "ScalaNLP Maven2"           at "https://repo.scalanlp.org/repo",
+//  "scalagen-repo"             at "https://central.maven.org/com.mysema.scalagen/scalagen",   // NOT CORRECT, tried everything
+  )
   // Libraries
 
   lazy val testDeps = Seq(

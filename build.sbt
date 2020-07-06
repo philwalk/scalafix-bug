@@ -105,6 +105,7 @@ lazy val commonSettings = Seq(
 //scalaVersion               := svdefault,
   organization               := "org.vastblue",
   version                    := projectVersion,
+  resolvers ++= Dependencies.depResolvers,
   publishArtifact in (Compile, packageDoc) := false,
   scalacOptions += "-Yresolve-term-conflict:object", // values are: "package", "object", "error"
   scalacOptions += "-deprecation",
