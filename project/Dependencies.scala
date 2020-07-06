@@ -26,10 +26,6 @@ object Dependencies {
     "Google-repo"               at "https://mvnrepository.com/artifact/com.googlecode.cobra-winldtp/ldtp",
     "Cobra-Ldtp-Repo"           at "https://artifacts.alfresco.com/nexus/content/repositories/public/",
     "maven-central-snowtide"    at "https://mvnrepository.com/artifact/com.snowtide",
-   ("snowtide-releases"         at "http://maven.snowtide.com/releases").withAllowInsecureProtocol(true),
-//   Resolver.bintrayRepo("cibotech", "public"),
-//  "ScalaNLP Maven2"           at "https://repo.scalanlp.org/repo",
-//  "scalagen-repo"             at "https://central.maven.org/com.mysema.scalagen/scalagen",   // NOT CORRECT, tried everything
   )
   // Libraries
 
@@ -38,8 +34,8 @@ object Dependencies {
   )
 
   lazy val vastblueDeps = Seq(
-    "org.scalameta"                           % s"semanticdb-scalac_${svdefault}"      % sMeta,
-    "org.scalameta"                          %% "scalameta"                            % sMeta,
+//  "org.scalameta"                           % s"semanticdb-scalac_${svdefault}"      % sMeta,
+//  "org.scalameta"                          %% "scalameta"                            % sMeta,
     "org.scala-lang.modules"                 %% "scala-collection-compat"              % "2.1.6",
   )
 

@@ -26,7 +26,6 @@ scalacOptions := Seq(
   // Linting options
   "-unchecked",
   "-Xcheckinit",
-  /*
   "-Xlint:adapted-args",
   "-Xlint:constant",
   "-Xlint:delayedinit-select",
@@ -53,14 +52,11 @@ scalacOptions := Seq(
   "-Wunused:patvars",
   "-Wunused:privates",
   "-Wvalue-discard",
-  */
 )
 
    scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2Compat","-rewrite") else Nil }
-// scalacOptions ++= { if (isDotty.value) Seq("-language:Scala2") else Nil }
 
 scalacOptions ++= Seq("-language:implicitConversions")
-//scalacOptions ++= { if (version.value.startsWith("2.12")) Seq( "-Xplugin-require:semanticdb" ) else Nil }
 
 scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
 case Some((2, n)) if n >= 13 => Seq("-Xsource:2.14")
@@ -71,9 +67,7 @@ case _ => Seq("-Yno-adapted-args")
 publishArtifact in (Compile, packageSrc) := true
 publishArtifact in (Compile, packageDoc) := false
 
-// EclipseKeys.eclipseOutput := Some("target")
-//import scala.sys.process._
-gitHeadCommitSha in ThisBuild := scala.sys.process.Process("git rev-parse HEAD").lineStream.head
+//gitHeadCommitSha in ThisBuild := scala.sys.process.Process("git rev-parse HEAD").lineStream.head
 
 //lazy val scalafixSemanticdbScalac = "org.scalameta" % "semanticdb-scalac" % sMeta // cross CrossVersion.full
 scalafixDependencies in ThisBuild += "org.scala-lang.modules" %% "scala-collection-migrations" % "2.1.4"

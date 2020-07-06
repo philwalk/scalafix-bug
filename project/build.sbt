@@ -21,10 +21,22 @@ scalacOptions := Seq(
 )
 
 resolvers ++= Seq(
-   "releases"            at "https://oss.sonatype.org/content/repositories/releases"
-  ,"snapshots"           at "https://oss.sonatype.org/content/repositories/snapshots" // poi!
-  ,"renci.org"           at "https://ci-dev.renci.org/nexus/content/repositories/public"
-  ,"Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/"
+   "releases"                 at "https://oss.sonatype.org/content/repositories/releases"
+  ,"snapshots"                at "https://oss.sonatype.org/content/repositories/snapshots" // poi!
+  ,"renci.org"                at "https://ci-dev.renci.org/nexus/content/repositories/public"
+  ,"Typesafe repository"      at "https://repo.typesafe.com/typesafe/releases/"
+  ,"semanticdb repo hunch"    at "https://mvnrepository.com/artifact/semanticdb-scalac"
+  ,"semanticdb repo"          at "https://mvnrepository.com/artifact/org.scalameta/semanticdb-scalac"
+  ,"mavenrepos-sema"          at "https://mvnrepository.com/artifact/org.scalameta/semanticdb"
+  ,"mavenrepository"          at "https://mvnrepository.com/artifact/org.scalameta/scalameta"
+  ,"maven artifact"           at "https://mvnrepository.com/artifact"
+  ,"Sonatype Releases"        at "https://oss.sonatype.org/content/repositories/releases"
+  ,"Sonatype snapshots"       at "https://oss.sonatype.org/content/repositories/snapshots"
+  ,"maven-central"            at "https://mvnrepository.com/artifact/org.scalameta"
+  ,"Google-repo"              at "https://mvnrepository.com/artifact/com.googlecode.cobra-winldtp/ldtp"
+  ,"Cobra-Ldtp-Repo"          at "https://artifacts.alfresco.com/nexus/content/repositories/public/"
+  ,"maven-central-snowtide"   at "https://mvnrepository.com/artifact/com.snowtide"
+  ,("snowtide-releases"       at "http://maven.snowtide.com/releases").withAllowInsecureProtocol(true)
 )
 
 lazy val excludedTestNames = SettingKey[Seq[String]]("excluded-tests", "temporary excluded tests")
