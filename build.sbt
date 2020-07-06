@@ -67,7 +67,7 @@ case _ => Seq("-Yno-adapted-args")
 publishArtifact in (Compile, packageSrc) := true
 publishArtifact in (Compile, packageDoc) := false
 
-//gitHeadCommitSha in ThisBuild := scala.sys.process.Process("git rev-parse HEAD").lineStream.head
+  gitHeadCommitSha in ThisBuild := scala.sys.process.Process("git rev-parse HEAD").lineStream.head
 
 //lazy val scalafixSemanticdbScalac = "org.scalameta" % "semanticdb-scalac" % sMeta // cross CrossVersion.full
 scalafixDependencies in ThisBuild += "org.scala-lang.modules" %% "scala-collection-migrations" % "2.1.4"
